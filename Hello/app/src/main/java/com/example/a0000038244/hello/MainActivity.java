@@ -10,16 +10,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
-        Button btn = new Button(this);
+        setContentView(R.layout.activity_main);
+        Button btn = (Button) findViewById(R.id.button);
         btn.setText("Hello");
-        btn.setOnClickListener(new View.OnClickListener(){
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Button b = (Button) v;
-                b.setText("こんにちは");
+            public void onClick(View v) {
+                Button btn = (Button)v;
+                btn.setText("こんにちは");
             }
         });
-        setContentView(btn);
+
+
+        //Button btn = new Button(this);
+        //btn.setText("Hello");
+        //btn.setOnClickListener(new View.OnClickListener(){
+        //    @Override
+        //    public void onClick(View v){
+        //        Button b = (Button) v;
+        //        b.setText("こんにちは");
+        //    }
+        //});
+        //setContentView(btn);
     }
 }
